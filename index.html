@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parking Space Occupancy Analysis</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>🚗 Smart Parking</h1>
+        <p>Parking Space Occupancy Analysis</p>
+    </div>
+</header>
+
+<main>
+
+    <!-- Dashboard Cards -->
+
+    <section class="dashboard">
+
+        <div class="card">
+            <div class="icon">🅿️</div>
+            <h3>Total Spaces</h3>
+            <h2 id="totalSpaces">50</h2>
+        </div>
+
+        <div class="card occupied-card">
+            <div class="icon">🔴</div>
+            <h3>Occupied</h3>
+            <h2 id="occupiedSpaces">36</h2>
+        </div>
+
+        <div class="card available-card">
+            <div class="icon">🟢</div>
+            <h3>Available</h3>
+            <h2 id="availableSpaces">14</h2>
+        </div>
+
+        <div class="card">
+            <div class="icon">📊</div>
+            <h3>Occupancy Rate</h3>
+            <h2 id="occupancyRate">72%</h2>
+        </div>
+
+    </section>
+
+
+    <!-- Peak Hour -->
+
+    <section class="peak-section">
+
+        <div>
+            <h2>⏰ Peak Parking Hour</h2>
+            <p>The parking lot is busiest at:</p>
+        </div>
+
+        <div class="peak-time" id="peakHour">
+            2:00 PM
+        </div>
+
+    </section>
+
+
+    <!-- Charts -->
+
+    <section class="charts">
+
+        <div class="chart-container">
+
+            <h2>📈 Hourly Occupancy</h2>
+
+            <canvas id="hourlyChart"></canvas>
+
+        </div>
+
+
+        <div class="chart-container">
+
+            <h2>📅 Daily Occupancy</h2>
+
+            <canvas id="dailyChart"></canvas>
+
+        </div>
+
+    </section>
+
+
+    <!-- Parking Slots -->
+
+    <section class="parking-section">
+
+        <h2>🅿️ Parking Slot Status</h2>
+
+        <p class="subtitle">
+            Green = Available &nbsp;&nbsp; Red = Occupied
+        </p>
+
+        <div id="parkingGrid" class="parking-grid">
+
+        </div>
+
+    </section>
+
+
+    <!-- Analysis -->
+
+    <section class="analysis">
+
+        <h2>📋 Parking Analysis</h2>
+
+        <div class="analysis-content">
+
+            <div>
+                <h3>Highest Occupancy</h3>
+                <p id="highestOccupancy">94%</p>
+            </div>
+
+            <div>
+                <h3>Lowest Occupancy</h3>
+                <p id="lowestOccupancy">32%</p>
+            </div>
+
+            <div>
+                <h3>Average Occupancy</h3>
+                <p id="averageOccupancy">68%</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>Parking Space Occupancy Analysis | Mini Project</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
