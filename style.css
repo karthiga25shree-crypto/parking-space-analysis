@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+
+/* Header */
+
+header {
+    background: #172554;
+    color: white;
+    padding: 25px 7%;
+}
+
+.header-content h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.header-content p {
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+
+/* Main */
+
+main {
+    width: 86%;
+    margin: 30px auto;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 32px;
+}
+
+.occupied-card h2 {
+    color: #dc2626;
+}
+
+.available-card h2 {
+    color: #16a34a;
+}
+
+
+/* Peak Section */
+
+.peak-section {
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.peak-section p {
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+.peak-time {
+    font-size: 30px;
+    font-weight: bold;
+    color: #dc2626;
+}
+
+
+/* Charts */
+
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.chart-container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.chart-container h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Parking Section */
+
+.parking-section {
+    margin-top: 25px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.parking-section h2 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+
+/* Parking Grid */
+
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 12px;
+}
+
+.slot {
+    padding: 15px 5px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.slot:hover {
+    transform: scale(1.05);
+}
+
+.slot.available {
+    background: #16a34a;
+}
+
+.slot.occupied {
+    background: #dc2626;
+}
+
+
+/* Analysis */
+
+.analysis {
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.analysis h2 {
+    margin-bottom: 20px;
+}
+
+.analysis-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.analysis-content div {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.analysis-content h3 {
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.analysis-content p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 40px;
+    padding: 25px;
+    background: #172554;
+    color: white;
+    text-align: center;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+    }
+
+    .parking-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    main {
+        width: 92%;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .peak-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .parking-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .analysis-content {
+        grid-template-columns: 1fr;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+    }
+}
